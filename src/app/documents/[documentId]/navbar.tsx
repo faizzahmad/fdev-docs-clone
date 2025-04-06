@@ -6,6 +6,9 @@ import { DocumentInput } from "./document-input";
 import { BoldIcon, FileIcon, FileJsonIcon, FilePenIcon, FilePlusIcon, FileTextIcon, GlobeIcon, ItalicIcon, PrinterIcon, Redo2Icon, RemoveFormattingIcon, Strikethrough, TextIcon, TrashIcon, Underline, Undo2Icon } from "lucide-react";
 import { BsFilePdf } from "react-icons/bs";
 import { useEditorStore } from "@/store/use-editor-store";
+import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
+import { Avatars } from "./avatars";
+import { Inbox } from "./inbox";
 export const Navbar = () => {
     const {editor} = useEditorStore();
     const insertTable = ({rows, cols} : {rows: number, cols: number}) => {
@@ -198,6 +201,17 @@ export const Navbar = () => {
                     </Menubar>
                 </div>
             </div>
+            </div>
+            <div className="flex gap-3 items-center pl-6">
+                <Avatars/>
+                <Inbox/>
+                <OrganizationSwitcher 
+                afterCreateOrganizationUrl={'/'}
+                afterLeaveOrganizationUrl={'/'}
+                afterSelectOrganizationUrl={'/'}
+                afterSelectPersonalUrl={'/'}
+                />
+            <UserButton/>
             </div>
         </nav>
     )
