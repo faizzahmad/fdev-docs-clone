@@ -40,7 +40,7 @@ export const TemplestGallery = () => {
                             isCreating && "pointer-events-none opacity-50"
                         )}>
                             <button disabled={isCreating}
-                            onClick={() => onTemplateClick(templates.label,"")} 
+                            onClick={() => onTemplateClick(templates.label, templates.initialContent)} 
                             // TODO add a proper initial content
                             style={{
                                 backgroundImage : `url(${templates.imageURL})`,
