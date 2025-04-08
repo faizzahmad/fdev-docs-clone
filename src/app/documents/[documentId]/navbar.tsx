@@ -16,7 +16,6 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { RenameDialog } from "@/components/rename-dialog";
 import { RemoveDialog } from "@/components/remove-dialog";
-import { set } from "date-fns";
 
 interface NavbarProps{
     data : Doc<"documents">;

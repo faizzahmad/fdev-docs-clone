@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { Navbar } from "./navbar";
 import { TemplestGallery } from "./templets-gallery";
 import { usePaginatedQuery } from "convex/react";
