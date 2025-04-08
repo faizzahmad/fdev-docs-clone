@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Extension } from "@tiptap/react";
 
 declare module '@tiptap/core' {
@@ -34,9 +33,9 @@ export const LineHeightExtension = Extension.create({
                             }
                         },
                         parseHTML: element => {
-                            element.style.lineHeight || this.options.defaultLineHeight
+                            return element.style.lineHeight || this.options.defaultLineHeight;
                         }
-
+                        
                     }
                 }
             }
