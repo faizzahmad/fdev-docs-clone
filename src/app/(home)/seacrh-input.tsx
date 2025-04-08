@@ -22,7 +22,10 @@ export const SearchInput = () => {
     return (
         <div className="flex-1 flex items-center justify-center">
             <form onSubmit={handelSubmit} className="relative max-w-[720px] w-full">
-            <Input ref={inputRef} value={value} placeholder="Search" className="md:text-base placeholder:text-neutral-800 px-14 w-full border-none focus-visible:shadow-[0_1px_1px_0_rgba(65,69,73,.3),0_1px_3px_1px_rgba(65,69,73,.15)] bg-[#f0f4f8] rounded-full h-[48px] focus-visible:ring-0 focus:bg-white" onChange={(e) => setValue(e.target.value) }/>
+            <Input ref={inputRef} value={value} placeholder="Search" className="md:text-base placeholder:text-neutral-800 px-14 w-full border-none focus-visible:shadow-[0_1px_1px_0_rgba(65,69,73,.3),0_1px_3px_1px_rgba(65,69,73,.15)] bg-[#f0f4f8] rounded-full h-[48px] focus-visible:ring-0 focus:bg-white" onChange={(e) => {
+                setValue(e.target.value)
+                setSearch(e.target.value);
+            } }/>
             <Button type="submit" variant={'ghost'} size={'icon'} className="absolute left-3 top-1/2 -translate-y-1/2 [&svg]:size-5 rounded-full">
                 <SearchIcon/>
             </Button>
