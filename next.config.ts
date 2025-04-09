@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/(.*)',
-        destination: 'https://yourdomain.com/:path*',
+        destination: 'https://fdev-docs-clone.vercel.app',
         permanent: true,
       },
     ]
