@@ -24,8 +24,8 @@ export function ConvexClientProvider({ children }: { children: ReactNode }) {
         </Authenticated>
         <Unauthenticated>
          <div className="flex flex-col items-center justify-center min-h-screen gap-y-5">
-         <div className="flex gap-3 items-center shrink-0 pr-6">
-         <Image src={'/logo.svg'} alt="Logo" width={50} height={36} />
+         <div className="flex gap-3 flex-col items-center shrink-0 pr-6">
+         <Image src={'/logo.svg'} alt="Logo" width={70} height={50} />
                 <h3 className="text-xl">Fdev Docs</h3>
             </div>
          <SignIn routing="hash"/>
